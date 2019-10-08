@@ -18,7 +18,10 @@ print('Lab Exercise 06 \n')
 
 '''
 Which of the following boolean expressions will be evaluated as False?
-Given letters = ['a','b','c','d']
+Given
+
+letters = ['a','b','c','d']
+print(len(letters[-2:]) == 2)
 
 A type(letters) == list
 B len(letters[-2:]) == 2
@@ -28,7 +31,7 @@ D letters[-2] == 'c'
 '''
 
 # BEGIN PROBLEM 1A SOLUTION
-answer1A = "BC"
+answer1A = "C"
 # END PROBLEM 1A SOLUTION
 
 
@@ -55,7 +58,7 @@ D. if len(var) <= 5
 '''
 
 # BEGIN PROBLEM 1B SOLUTION
-answer1B = "ABCD"
+answer1B = "ACD"
 # END PROBLEM 1B SOLUTION
 
 
@@ -163,6 +166,9 @@ numbers_test1 = [1,2,8]
 numbers_test2 = [4,3,1,5,6]
 
 print(answer3(numbers_test1))
+
+letters = ['a','b','c','d']
+print(letters[-2:])
 # END PROBLEM 3 SOLUTION
 
 # END LAB EXERCISE

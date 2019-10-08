@@ -28,7 +28,7 @@ D letters[-2] == 'c'
 '''
 
 # BEGIN PROBLEM 1A SOLUTION
-answer1A = BC
+#answer1A = BC
 # END PROBLEM 1A SOLUTION
 
 
@@ -55,7 +55,7 @@ D. if len(var) <= 5
 '''
 
 # BEGIN PROBLEM 1B SOLUTION
-answer1B = None
+#answer1B = ABCD
 # END PROBLEM 1B SOLUTION
 
 
@@ -73,7 +73,7 @@ Write a function named char_not_in_string(string)
 char_not_in_string(string) takes one arguments: <string>, a string
 char_not_in_string(string) should return True if char "a" is not in <string> and False if char "a" is in <string>
 
-Loop over str_list, apply the function char_not_in_string, write the string into 
+Loop over str_list, apply the function char_not_in_string, write the string into
 the list answer2 if char_not_in_string returns True
 
 Sample case
@@ -90,19 +90,26 @@ string  return value of "char_not_in_string"
 "d"     True
 
 So if we loop over str_list, answer2 should be ["bb", "cccc", "d"]
-Note that ["bb", "d", "cccc"] is not correct. Since we loop over str_list, the order of element 
+Note that ["bb", "d", "cccc"] is not correct. Since we loop over str_list, the order of element
 in the list should not change.
 '''
 
 
 # BEGIN PROBLEM 2 SOLUTION
 def char_not_in_string(string):
-    pass
+    if 'a' in string:
+        return True
+    else:
+        return False
+
 
 
 str_list = ["aaaa", "sse", "kgeakkk", "qweww", "", "l", "asdew"]
 answer2 = []
-
+for string in str_list:
+    if not char_not_in_string(string):
+        answer2.append(string)
+print(answer2)
 # END PROBLEM 2 SOLUTION
 
 
@@ -126,7 +133,7 @@ answer2 = []
 '''
 # The function answer3(numbers) takes one argument: <numbers>, a list of integers
 # "answer3" should return the sum of the integers in <numbers>.
-# You are required to use a for loop and arithmetic operators, as provided, to perform the addition, 
+# You are required to use a for loop and arithmetic operators, as provided, to perform the addition,
 # without using built-in functions (e.g., sum()).
 
 Sample input
@@ -141,10 +148,12 @@ Explanation
 
 # BEGIN PROBLEM 3 SOLUTION
 def answer3(numbers):
-    s = 0
-    for i in range(len(numbers)-1):
-        s = s + i
-    return s
+    sum = 0
+
+    for number in numbers:
+        sum += number
+
+    return sum
 
 
 # You can use "numbers_test1", "numbers_test2" to test your function
@@ -153,7 +162,7 @@ def answer3(numbers):
 numbers_test1 = [1,2,8]
 numbers_test2 = [4,3,1,5,6]
 
-
+print(answer3(numbers_test1))
 # END PROBLEM 3 SOLUTION
 
 # END LAB EXERCISE

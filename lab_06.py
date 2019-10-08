@@ -28,7 +28,7 @@ D letters[-2] == 'c'
 '''
 
 # BEGIN PROBLEM 1A SOLUTION
-#answer1A = BC
+answer1A = "BC"
 # END PROBLEM 1A SOLUTION
 
 
@@ -55,7 +55,7 @@ D. if len(var) <= 5
 '''
 
 # BEGIN PROBLEM 1B SOLUTION
-#answer1B = ABCD
+answer1B = "ABCD"
 # END PROBLEM 1B SOLUTION
 
 
